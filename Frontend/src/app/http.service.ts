@@ -7,7 +7,7 @@ import { IEmployee } from './interfaces/Employee';
 })
 export class HttpService {
 
-  baseUrl = "https://localhost:7064/"
+  private baseUrl = "https://localhost:7064/"
 
   constructor(private httpClient : HttpClient) { }
 

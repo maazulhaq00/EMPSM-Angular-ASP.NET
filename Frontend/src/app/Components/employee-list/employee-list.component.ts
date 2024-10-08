@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IEmployee } from '../../interfaces/Employee';
+import { HttpService } from '../../http.service';
 
 @Component({
   selector: 'app-employee-list',
@@ -8,5 +10,17 @@ import { Component } from '@angular/core';
   styleUrl: './employee-list.component.css'
 })
 export class EmployeeListComponent {
+  
+  employeeList: IEmployee[] = [];
 
+  constructor(private httpService: HttpService){}
+
+  ngOnInit(){
+    this.httpService.getAllEmployees().subscribe((result)=>{
+      this.employeeList = result;
+
+      console.log(this.employeeList);
+      
+    })
+  }
 }
