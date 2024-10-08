@@ -27,18 +27,12 @@
   },
   {
     "ContainingType": "EmployeeCRUDAPIs.Controllers.EmployeeController",
-    "Method": "GetEmployeesByName",
+    "Method": "GetEmployees",
     "RelativePath": "api/Employee",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "name",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[EmployeeCRUDAPIs.Models.Employee, EmployeeCRUDAPIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",

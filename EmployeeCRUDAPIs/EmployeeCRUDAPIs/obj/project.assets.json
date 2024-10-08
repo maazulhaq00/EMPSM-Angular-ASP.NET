@@ -4529,11 +4529,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Z:\\Azure and Web Services\\2302F1\\EmployeeCRUDAPIs\\EmployeeCRUDAPIs\\EmployeeCRUDAPIs.csproj",
+      "projectUniqueName": "C:\\Users\\maaz ul haq\\Desktop\\EMPMS\\EmployeeCRUDAPIs\\EmployeeCRUDAPIs\\EmployeeCRUDAPIs.csproj",
       "projectName": "EmployeeCRUDAPIs",
-      "projectPath": "Z:\\Azure and Web Services\\2302F1\\EmployeeCRUDAPIs\\EmployeeCRUDAPIs\\EmployeeCRUDAPIs.csproj",
+      "projectPath": "C:\\Users\\maaz ul haq\\Desktop\\EMPMS\\EmployeeCRUDAPIs\\EmployeeCRUDAPIs\\EmployeeCRUDAPIs.csproj",
       "packagesPath": "C:\\Users\\maaz ul haq\\.nuget\\packages\\",
-      "outputPath": "Z:\\Azure and Web Services\\2302F1\\EmployeeCRUDAPIs\\EmployeeCRUDAPIs\\obj\\",
+      "outputPath": "C:\\Users\\maaz ul haq\\Desktop\\EMPMS\\EmployeeCRUDAPIs\\EmployeeCRUDAPIs\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
