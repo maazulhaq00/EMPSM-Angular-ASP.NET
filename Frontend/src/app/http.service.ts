@@ -14,4 +14,7 @@ export class HttpService {
   getAllEmployees(){
     return this.httpClient.get<IEmployee[]>( this.baseUrl + "api/Employee");
   }
+  createEmployees(employee : IEmployee){
+    return this.httpClient.post<IEmployee>(this.baseUrl + "api/Employee", employee);
+  }
 }

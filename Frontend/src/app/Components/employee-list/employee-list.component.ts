@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { IEmployee } from '../../interfaces/Employee';
 import { HttpService } from '../../http.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-employee-list',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './employee-list.component.html',
   styleUrl: './employee-list.component.css'
 })

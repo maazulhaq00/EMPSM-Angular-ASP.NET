@@ -1,1 +1,18 @@
-<p>employee-form works!</p>
+<h1>Create Employee</h1>
+
+<form method="post" [formGroup]="employeeForm" (ngSubmit)="submitForm()">
+    <div class="mb-3">
+        <label for="empName" class="form-label">Employee Name</label>
+        <input type="text" class="form-control" id="empName" aria-describedby="emailHelp" formControlName="empName">
+    </div>
+    <div class="mb-3">
+        <label for="empEmail" class="form-label">Employee Email</label>
+        <input type="email" class="form-control" id="empEmail" aria-describedby="emailHelp" formControlName="empEmail">
+    </div>
+    <div class="mb-3">
+        <label for="empSalary" class="form-label">Employee Salary</label>
+        <input type="number" class="form-control" id="empSalary" aria-describedby="emailHelp" formControlName="empSalary">
+    </div>
+    <button type="submit" class="btn btn-dark">Create</button>
+
+</form>
