@@ -5,6 +5,7 @@
         <th scope="col">Employee Name</th>
         <th scope="col">Email</th>
         <th scope="col">Salary</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -13,6 +14,11 @@
         <td>{{emp.empName}}</td>
         <td>{{emp.empEmail}}</td>
         <td>{{emp.empSalary}}</td>
+        <td>
+          <button class="btn btn-dark" (click)="edit(emp.empId)">Edit</button>
+          <button class="btn btn-danger" (click)="delete(emp.empId)">Delete</button>
+        </td>
+
       </tr>
      
     </tbody>

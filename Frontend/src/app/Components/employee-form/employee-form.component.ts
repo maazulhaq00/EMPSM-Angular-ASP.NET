@@ -36,7 +36,7 @@ export class EmployeeFormComponent {
       empSalary: this.employeeForm.value.empSalary!,
     }
 
-    this.httpService.createEmployees(employee).subscribe((result)=>{
+    this.httpService.createEmployee(employee).subscribe((result)=>{
 
       console.log("Inserted");
       this.router.navigateByUrl('/employees')

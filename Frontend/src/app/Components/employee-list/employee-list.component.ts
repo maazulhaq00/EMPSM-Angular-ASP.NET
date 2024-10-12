@@ -17,11 +17,29 @@ export class EmployeeListComponent {
   constructor(private httpService: HttpService){}
 
   ngOnInit(){
+    this.fetchEmployeeRecord()
+  }
+
+  fetchEmployeeRecord(){
     this.httpService.getAllEmployees().subscribe((result)=>{
       this.employeeList = result;
-
       console.log(this.employeeList);
+    })
+  }
+
+  edit(empId:number){
+    console.log("edit ==> " + empId);
+  }
+  delete(empId:number){
+    this.httpService.deleteEmployee(empId).subscribe(()=>{
+      console.log("Record deleted");
+
+      // this.employeeList = this.employeeList.filter((employee)=>{
+      //   return employee.empId != empId
+      // })
       
+      this.fetchEmployeeRecord();
+
     })
   }
 }
