@@ -28,7 +28,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "public/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+              "public/bootstrap-5.3.3-dist/css/bootstrap.min.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": ["public/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"]
           },

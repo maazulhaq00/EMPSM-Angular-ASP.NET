@@ -3,6 +3,7 @@ import { IEmployee } from '../../interfaces/Employee';
 import { HttpService } from '../../http.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-employee-list',
@@ -14,7 +15,8 @@ import { Router } from '@angular/router';
 export class EmployeeListComponent {
   
   employeeList: IEmployee[] = [];
-
+  
+  toastr = inject(ToastrService)
   router = inject(Router)
 
   constructor(private httpService: HttpService){}
@@ -43,6 +45,8 @@ export class EmployeeListComponent {
       // })
       
       this.fetchEmployeeRecord();
+      
+      this.toastr.success("Employee Deleted Successfully", "Success")
 
     })
   }
