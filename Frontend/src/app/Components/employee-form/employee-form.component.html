@@ -1,5 +1,8 @@
+@if (isEdit) {
+<h1>Edit Employee</h1>
+}@else {
 <h1>Create Employee</h1>
-
+}
 <form method="post" [formGroup]="employeeForm" (ngSubmit)="submitForm()">
     <div class="mb-3">
         <label for="empName" class="form-label">Employee Name</label>
@@ -11,8 +14,13 @@
     </div>
     <div class="mb-3">
         <label for="empSalary" class="form-label">Employee Salary</label>
-        <input type="number" class="form-control" id="empSalary" aria-describedby="emailHelp" formControlName="empSalary">
+        <input type="number" class="form-control" id="empSalary" aria-describedby="emailHelp"
+            formControlName="empSalary">
     </div>
+    @if (isEdit) {
+    <button type="submit" class="btn btn-dark">Update</button>
+    }@else {
     <button type="submit" class="btn btn-dark">Create</button>
+    }
 
 </form>

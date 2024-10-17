@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { IEmployee } from '../../interfaces/Employee';
 import { HttpService } from '../../http.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee-form',
@@ -16,6 +16,27 @@ export class EmployeeFormComponent {
   formBuilder = inject(FormBuilder)
   httpService = inject(HttpService)
   router = inject(Router)
+  
+  activatedRoute = inject(ActivatedRoute)
+
+  empId! : number;
+
+  isEdit : boolean = false;
+
+  ngOnInit(){
+    this.empId = this.activatedRoute.snapshot.params['id']
+
+    if(this.empId){
+      this.isEdit = true
+      this.httpService.getEmployeesById(this.empId).subscribe((result)=>{
+        this.employeeForm.patchValue(result)
+      })
+    }
+
+    console.log("Emp Id ==> " + this.empId);
+    console.log("Is Edit ==> " + this.isEdit);
+    
+  }
 
   employeeForm = this.formBuilder.group(
     {

@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { IEmployee } from '../../interfaces/Employee';
 import { HttpService } from '../../http.service';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee-list',
@@ -13,6 +14,8 @@ import { CommonModule } from '@angular/common';
 export class EmployeeListComponent {
   
   employeeList: IEmployee[] = [];
+
+  router = inject(Router)
 
   constructor(private httpService: HttpService){}
 
@@ -29,6 +32,7 @@ export class EmployeeListComponent {
 
   edit(empId:number){
     console.log("edit ==> " + empId);
+    this.router.navigateByUrl("edit-employee/" + empId)
   }
   delete(empId:number){
     this.httpService.deleteEmployee(empId).subscribe(()=>{

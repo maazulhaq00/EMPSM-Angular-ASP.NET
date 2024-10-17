@@ -20,4 +20,8 @@ export class HttpService {
   deleteEmployee(empId : number){
     return this.httpClient.delete(this.baseUrl + "api/Employee/" + empId);
   }
+  
+  getEmployeesById(empId : number){
+    return this.httpClient.get<IEmployee>( this.baseUrl + "api/Employee/" + empId);
+  }
 }
